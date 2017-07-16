@@ -1,4 +1,4 @@
-#!env/bin/python
+#!../env/bin/python
 
 
 from flask import Flask
@@ -20,20 +20,19 @@ def after_request(response):
     return response
 
 
-@app.route("/api/ml_data", methods=["POST"])
-def ml_data():
-    data = {"this": "this"}
-    #parsed = urllib.parse.urlparse(request.data)
-    #if not request.json:
-    #    abort(400)
-    #else:
-    #    data = {"data": "hello world"}
-    res = request.get_json(force=True)
-    print(res)
-    return jsonify(data)
+@app.route("/api/test", methods=["POST"])
+def test():
+    data = {"data": "data"}
+    url = "http://127.0.0.1:5000/api/ml_data"
+    parsed = json.dumps(data).encode("utf8")
+    headers = {"Content-type": "application/json", "Accept": "text/plain"}
+    req = urllib.request.Request(url, parsed, headers)
+    resp = urllib.request.urlopen(req)
+    return resp.read()
+
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=5001)
 
 

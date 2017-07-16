@@ -1,0 +1,25 @@
+//document.addEventListener("DOMContentLoaded", execute_call);
+
+function execute_call() {
+
+	var req = new XMLHttpRequest();
+
+	var payload = {"post": "this is a post"};
+
+
+	req.open("POST", "http://127.0.0.1:5001/api/test", true);
+    req.setRequestHeader("Content-type", "application/json");
+	req.addEventListener("load", function() {
+		if(req.status >= 200 && req.status < 400) {
+			var response = JSON.parse(req.responseText);
+            document.getElementById("data").textContent = "success!";
+		} else {
+			document.getElementById("data").textContent = "There was an error.";
+		}
+        event.preventDefault();	
+	});
+    req.send(JSON.stringify(payload));
+	
+}
+
+execute_call();
