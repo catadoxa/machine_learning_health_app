@@ -7,7 +7,7 @@ function execute_call() {
 	var payload = {"post": "this is a post"};
 
 
-	req.open("POST", "http://127.0.0.1:5001/api/test", true);
+	req.open("POST", "https://ml-health-app-stage.herokuapp.com/api/ml_data", true);
     req.setRequestHeader("Content-type", "application/json");
 	req.addEventListener("load", function() {
 		if(req.status >= 200 && req.status < 400) {

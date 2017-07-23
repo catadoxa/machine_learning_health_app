@@ -1,0 +1,29 @@
+[
+    
+    { "name": "insomnia", "type": "boolean", "problem": true, "question": "Did you experience insomnia?", "answer": null, "additional": {
+        "name": "insomnia-severity", "type": "rating", "problem": true, "question": "How severe was the insomnia?", "answer": null, "additional": null 
+        }    
+    },
+
+    { "name": "wake-up", "type": "time", "problem": false, "question": "When did you wake up?", "answer": null, "additional": null },
+
+    { "name": "go-to-bed", "type": "time", "problem": false, "question": "When did you go to bed?", "answer": null, "additional": null },
+
+    { "name": "naps", "type": "boolean", "problem": false, "question": "Did you take any naps?", "answer": null, "additional": {
+        "name": "nap-amount", "type": "amount", "problem": false, "question": "How many minutes did you nap?", "answer": null, "additional": null 
+        }    
+    },    
+
+    { "name": "caffeine", "type": "amount", "problem": false, "question": "How many units of caffeine did you have (a unit is 8 oz of coffee or tea, 20 oz of caffeinated soda)?", "answer": null, "additional": null },
+
+    { "name": "alcohol", "type": "amount", "problem": false, "question": "How many units of alcohol did you have (a unit is 12 oz of beer, 5 oz of wine, 1.5 oz of liquor)?", "answer": null, "additional": null },
+
+    { "name": "exercise-strength", "type": "amount", "problem": false, "question": "How many minutes of strength training did you do, such as lifting weights or doing push ups?", "answer": null, "additional": null },
+
+    { "name": "exercise-aerobic", "type": "amount", "problem": false, "question": "How many minutes of aerobic exercise did you do, such as jogging or cycling?", "answer": null, "additional": null },
+
+    { "name": "walking", "type": "amount", "problem": false, "question": "How many minutes of walking did you do?", "answer": null, "additional": null },
+
+    { "name": "wake-up", "type": "amount", "problem": false, "question": "How many hours of work did you do, including professional and personal work?", "answer": null, "additional": null },
+
+]
