@@ -22,7 +22,7 @@ def after_request(response):
 
 @app.route("/api/ml_data", methods=["POST"])
 def ml_data():
-    data = {"this": "this"}
+    data = {"newstuff": "new!"}
     res = request.get_json(force=True)
     print(res)
     return jsonify(data)
