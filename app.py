@@ -21,11 +21,11 @@ def after_request(response):
 
 
 @app.route("/api/login", methods=["POST"])
-def ml_data():
+def login():
     data = read_json("insomnia_questions.json")
     res = request.get_json(force=True)
     #print(res)
-    return data
+    return jsonify(data)
 
 
 

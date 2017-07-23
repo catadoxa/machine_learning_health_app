@@ -10,7 +10,7 @@ def read_json(filename):
 
 
 def main():
-    data = read_json(insomnia_data.json)
+    data = read_json("insomnia_data.json")
     pprint(data)
 
 

@@ -24,6 +24,6 @@
 
     { "name": "walking", "type": "amount", "problem": false, "question": "How many minutes of walking did you do?", "answer": null, "additional": null },
 
-    { "name": "wake-up", "type": "amount", "problem": false, "question": "How many hours of work did you do, including professional and personal work?", "answer": null, "additional": null },
+    { "name": "work", "type": "amount", "problem": false, "question": "How many hours of work did you do, including professional and personal work?", "answer": null, "additional": null }
 
 ]
