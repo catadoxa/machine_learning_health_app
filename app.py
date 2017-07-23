@@ -1,4 +1,4 @@
-#!env/bin/python
+#!/usr/bin/env python
 
 
 from flask import Flask
@@ -7,7 +7,7 @@ from flask import abort
 from flask import jsonify
 import urllib
 import json
-
+from analyze import read_json
 
 app = Flask(__name__)
 
@@ -18,6 +18,15 @@ def after_request(response):
     response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
     response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE')
     return response
+
+
+@app.route("/api/login", methods=["POST"])
+def ml_data():
+    data = read_json("insomnia_questions.json")
+    res = request.get_json(force=True)
+    #print(res)
+    return data
+
 
 
 @app.route("/api/ml_data", methods=["POST"])
