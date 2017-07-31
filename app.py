@@ -7,7 +7,7 @@ from flask import abort
 from flask import jsonify
 import urllib
 import json
-from analyze import read_json, get_analysis
+from analysis.analyze import get_analysis
 
 app = Flask(__name__)
 
@@ -20,11 +20,11 @@ def after_request(response):
     return response
 
 
-@app.route("/api/login", methods=["POST"])
-def login():
-    data = read_json("insomnia_questions.json")
-    req = request.get_json(force=True)
-    return jsonify(data)
+#@app.route("/api/login", methods=["POST"])
+#def login():
+#    data = read_json("insomnia_questions.json")
+#    req = request.get_json(force=True)
+#    return jsonify(data)
 
 
 

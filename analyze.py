@@ -24,8 +24,8 @@ def to_array_dict(data):
             if not question['name'] in headers:
                 headers.append(question['name'])
             data_dict[key].append(question['answer'])
-    #print(headers)    
-    #pprint(data_dict)
+    print(headers)    
+    pprint(data_dict)
     return data_dict, headers
 
 
@@ -43,7 +43,7 @@ def analyze(n, np_array):
 
 
 def get_analysis():
-    data = read_json("insomnia_data.json")
+    data = read_json("analysis//insomnia_data.json")
     #pprint(data)
     data_dict, headers = to_array_dict(data)
     np_array = zip_it(data_dict)
@@ -59,5 +59,8 @@ def get_analysis():
     #pprint(ret)
     return jsonify(ret)
     
+
+if __name__ == '__main__':
+    get_analysis()
 
 
