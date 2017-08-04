@@ -30,8 +30,8 @@ def after_request(response):
 
 @app.route("/api/ml_data", methods=["POST"])
 def ml_data():
-    data = get_analysis()
     req = request.get_json(force=True)
+    data = get_analysis(req)
     #print(data)
     return data
 

@@ -8,6 +8,8 @@ import numpy as np
 from flask import jsonify
 from .data import Data
 from .linear_regression import LinearRegressionAnalysis
+import urllib
+
 
 def analyze_kmeans(n, np_array):
     kmeans = KMeans(n_clusters=n)
@@ -33,9 +35,17 @@ def get_answers_to_matrix(data):
     return arry
 
 
-def get_analysis():
-    data = "analysis//insomnia_data.json"
+def get_analysis(req_data):
+    #get data
+    #req_data = {"username": "123", "password": "123"}
+    url = "http://web.engr.oregonstate.edu/~aluyorg/history.php"
+    req_data = json.dumps(req_data).encode("utf8")
+    headers = {"Content-type": "application/json", "Accept": "text/plain"}
+    req = urllib.request.Request(url, req_data, headers)
+    resp = urllib.request.urlopen(req)
+    data = json.loads(resp.read())
     data = Data(data)
+
 #    #np_array = get_answers_to_matrix(data)
 #    independent, target, independent_names = get_matrix_and_target(data)
 #    lr = LinearRegression(True, True, True)
@@ -61,6 +71,7 @@ def get_analysis():
 #        lrtwo = LinearRegression(True, True, True)
 #        lrtwo.fit(col, target)
 #        print("Mean " + independent_names[i] + ": " + str(np.mean((target - lrtwo.predict(col))**2)))
+#this is the good stuff
     ret = []
     LRA = LinearRegressionAnalysis(data)
     for i in range(len(LRA.X_names)):
