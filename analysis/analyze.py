@@ -38,13 +38,16 @@ def get_answers_to_matrix(data):
 def get_analysis(req_data):
     #get data
     #req_data = {"username": "123", "password": "123"}
-    url = "http://web.engr.oregonstate.edu/~aluyorg/history.php"
-    req_data = json.dumps(req_data).encode("utf8")
-    headers = {"Content-type": "application/json", "Accept": "text/plain"}
-    req = urllib.request.Request(url, req_data, headers)
-    resp = urllib.request.urlopen(req)
-    data = json.loads(resp.read())
-    data = Data(data)
+
+#    url = "http://web.engr.oregonstate.edu/~aluyorg/history.php"
+#    req_data = json.dumps(req_data).encode("utf8")
+#    headers = {"Content-type": "application/json", "Accept": "text/plain"}
+#    req = urllib.request.Request(url, req_data, headers)
+#    resp = urllib.request.urlopen(req)
+#    data = json.loads(resp.read())
+#    data = Data(data)
+
+    data = Data(req_data)
 
 #    #np_array = get_answers_to_matrix(data)
 #    independent, target, independent_names = get_matrix_and_target(data)
@@ -75,12 +78,19 @@ def get_analysis(req_data):
     ret = []
     LRA = LinearRegressionAnalysis(data)
     for i in range(len(LRA.X_names)):
-        ret.append({LRA.X_names[i] + " coefficient": str(LRA.LR.coef_[0][i])})
-        ret.append({LRA.X_names[i] + " p value": str(LRA.p_values[i])})
-        ret.append({LRA.X_names[i] + " F statistic": str(LRA.F_statistic[i])})
-        ret.append({LRA.X_names[i] + " significance": str(LRA.significance[i])})
-    ret.append({"R squared": str(LRA.R_squared)})
-    ret.append({"intercept": str(LRA.LR.intercept_)})
+        obj = {}
+        obj['problem'] = data.problem
+        obj['input'] = LRA.X_names[i]
+        obj['significance'] = str(LRA.significance[i])
+        obj['breakeven'] = 0
+        obj['coefficient'] = str(LRA.LR.coef_[0][i])
+        ret.append(obj)
+#        ret.append({LRA.X_names[i] + " coefficient": str(LRA.LR.coef_[0][i])})
+#        ret.append({LRA.X_names[i] + " p value": str(LRA.p_values[i])})
+#        ret.append({LRA.X_names[i] + " F statistic": str(LRA.F_statistic[i])})
+#        ret.append({LRA.X_names[i] + " significance": str(LRA.significance[i])})
+#    ret.append({"R squared": str(LRA.R_squared)})
+#    ret.append({"intercept": str(LRA.LR.intercept_)})
     return jsonify(ret)
 
 

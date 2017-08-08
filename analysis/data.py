@@ -8,11 +8,13 @@ class Data:
     
     def __init__(self, data):
         try:
+            print("trying")
             self.data = self.read_json(data)
         except:
+            print("failing")
             #if it's not a valid file, then we should assume it's json already
             self.data = data
-        self.data_dict, self.names, self.problems = self.extract_data()
+        self.data_dict, self.names, self.problems, self.problem = self.extract_data()
 #        print(self.problems)    
 #        print(self.headers)    
 #        pprint(self.data_dict)
@@ -35,6 +37,7 @@ class Data:
         names = []
         problems = []
         filled_names = False
+        problem = ""
         for key, value in data_dict.items():
             nicer_data_dict[key] = []        
             vals = list(value)
@@ -44,9 +47,11 @@ class Data:
                 if not filled_names:
                     names.append(question['name'])
                     problems.append(question['problem'])
+                    if question['problem']:
+                        problem = question['name']
                 nicer_data_dict[key].append(float(question['answer']))
             filled_names = True
-        return nicer_data_dict, names, problems
+        return nicer_data_dict, names, problems, problem
 
     """
     reads JSON from the given file

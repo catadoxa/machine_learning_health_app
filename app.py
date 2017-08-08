@@ -9,6 +9,7 @@ import urllib
 import json
 from analysis.analyze import get_analysis
 
+
 app = Flask(__name__)
 
 
@@ -31,8 +32,9 @@ def after_request(response):
 @app.route("/api/ml_data", methods=["POST"])
 def ml_data():
     req = request.get_json(force=True)
-    data = get_analysis(req)
-    #print(data)
+    #data = get_analysis(req)
+    data = get_analysis("analysis/insomnia2_data.json")
+    print(data)
     return data
 
 
