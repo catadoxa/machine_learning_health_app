@@ -8,13 +8,13 @@ class Data:
     
     def __init__(self, data):
         try:
-            print("trying")
+            #attempt to read the data from a file
             self.data = self.read_json(data)
         except:
-            print("failing")
             #if it's not a valid file, then we should assume it's json already
             self.data = data
         self.data_dict, self.names, self.problems, self.problem = self.extract_data()
+        self.averages = self.calc_averages()
 #        print(self.problems)    
 #        print(self.headers)    
 #        pprint(self.data_dict)
@@ -52,6 +52,17 @@ class Data:
                 nicer_data_dict[key].append(float(question['answer']))
             filled_names = True
         return nicer_data_dict, names, problems, problem
+
+    """
+    Finds the average daily value for each feature
+    """
+    def calc_averages(self):
+        ave_denom = len(self.data_dict.keys()) + 1
+        averages = [0] * len(self.names)
+        for val in self.data_dict.values():
+            for i in range(len(val)):
+                averages[i] += val[i]
+        return [round(val / ave_denom, 2) for val in averages]
 
     """
     reads JSON from the given file
