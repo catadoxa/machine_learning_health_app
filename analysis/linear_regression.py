@@ -14,7 +14,6 @@ class LinearRegressionAnalysis:
         self.X, self.Y, self.X_names = self.extract_data_to_arrays(data)
         self.set_regression()
         self.F_statistic, self.p_values = f_regression(self.X, self.Y)
-        #self.significance = [1 - (x if not isnan(x) else 1) for x in self.p_values]
         self.scores = self.calc_scores()
         self.low_day, self.low_margin, self.high_day, self.high_margin = self.average_days()
 
