@@ -16,7 +16,7 @@ class KMeansClusteringAnalysis():
 
     def create_return_data(self, data):
         cluster_data = []
-        for center in self.centers:
+        for center in self.kmeans.cluster_centers_:
             center_data = {}
             for i in range(len(data.names)):
                 center_data[data.names[i]] = "{0:.2f}".format(center[i])

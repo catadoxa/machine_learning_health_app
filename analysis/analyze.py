@@ -36,6 +36,7 @@ def get_analysis(req_data):
         ret["feature-data"].append(obj)
         ret["average-high"][LRA.X_names[i]] = "{0:.2f}".format(LRA.high_day[i])
         ret["average-low"][LRA.X_names[i]] = "{0:.2f}".format(LRA.low_day[i])
+    for i in range(len(data.names)):
         ret["average-day"][data.names[i]] = "{0:.2f}".format(data.averages[i])
     return jsonify(ret)
 
