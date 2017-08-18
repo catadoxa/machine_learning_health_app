@@ -15,7 +15,6 @@ def get_analysis(req_data):
     # resp = urllib.request.urlopen(req)
     # data = json.loads(resp.read())
     # data = Data(data)
-
     data = Data(req_data)
     ret = {}
     ret["feature-data"] = []
@@ -38,6 +37,10 @@ def get_analysis(req_data):
         ret["average-low"][LRA.X_names[i]] = "{0:.2f}".format(LRA.low_day[i])
     for i in range(len(data.names)):
         ret["average-day"][data.names[i]] = "{0:.2f}".format(data.averages[i])
+    error = False
+    if(len(data.data) < 5):
+        error = True
+    ret["error"] = error
     return jsonify(ret)
 
 

@@ -1,0 +1,290 @@
+{
+  "2017-06-01": [
+    {
+      "name": "insomnia",
+      "type": "rating",
+      "problem": true,
+      "question": "Did you experience insomnia?",
+      "answer": 2
+    },
+    {
+      "name": "wake-up",
+      "type": "time",
+      "problem": false,
+      "question": "When did you wake up?",
+      "answer": "6.75"
+    },
+    {
+      "name": "go-to-bed",
+      "type": "time",
+      "problem": false,
+      "question": "When did you go to bed?",
+      "answer": "22.75"
+    },
+    {
+      "name": "naps",
+      "type": "rating",
+      "problem": false,
+      "question": "Did you take any naps?",
+      "answer": 0
+    },
+    {
+      "name": "caffeine",
+      "type": "amount",
+      "problem": false,
+      "question": "How many units of caffeine did you have (a unit is 8 oz of coffee or tea, 20 oz of caffeinated soda)?",
+      "answer": 6
+    },
+    {
+      "name": "alcohol",
+      "type": "amount",
+      "problem": false,
+      "question": "How many units of alcohol did you have (a unit is 12 oz of beer, 5 oz of wine, 1.5 oz of liquor)?",
+      "answer": 1
+    },
+    {
+      "name": "exercise-strength",
+      "type": "amount",
+      "problem": false,
+      "question": "How many minutes of strength training did you do, such as lifting weights or doing push ups?",
+      "answer": 15
+    },
+    {
+      "name": "exercise-aerobic",
+      "type": "amount",
+      "problem": false,
+      "question": "How many minutes of aerobic exercise did you do, such as jogging or cycling?",
+      "answer": 40
+    },
+    {
+      "name": "walking",
+      "type": "amount",
+      "problem": false,
+      "question": "How many minutes of walking did you do?",
+      "answer": 0
+    },
+    {
+      "name": "work",
+      "type": "amount",
+      "problem": false,
+      "question": "How many hours of work did you do, including professional and personal work?",
+      "answer": 4
+    }
+  ],
+  "2017-06-02": [
+    {
+      "name": "insomnia",
+      "type": "rating",
+      "problem": true,
+      "question": "Did you experience insomnia?",
+      "answer": 0
+    },
+    {
+      "name": "wake-up",
+      "type": "time",
+      "problem": false,
+      "question": "When did you wake up?",
+      "answer": "6.5"
+    },
+    {
+      "name": "go-to-bed",
+      "type": "time",
+      "problem": false,
+      "question": "When did you go to bed?",
+      "answer": "22.75"
+    },
+    {
+      "name": "naps",
+      "type": "rating",
+      "problem": false,
+      "question": "Did you take any naps?",
+      "answer": 25
+    },
+    {
+      "name": "caffeine",
+      "type": "amount",
+      "problem": false,
+      "question": "How many units of caffeine did you have (a unit is 8 oz of coffee or tea, 20 oz of caffeinated soda)?",
+      "answer": 3
+    },
+    {
+      "name": "alcohol",
+      "type": "amount",
+      "problem": false,
+      "question": "How many units of alcohol did you have (a unit is 12 oz of beer, 5 oz of wine, 1.5 oz of liquor)?",
+      "answer": 2
+    },
+    {
+      "name": "exercise-strength",
+      "type": "amount",
+      "problem": false,
+      "question": "How many minutes of strength training did you do, such as lifting weights or doing push ups?",
+      "answer": 10
+    },
+    {
+      "name": "exercise-aerobic",
+      "type": "amount",
+      "problem": false,
+      "question": "How many minutes of aerobic exercise did you do, such as jogging or cycling?",
+      "answer": 25
+    },
+    {
+      "name": "walking",
+      "type": "amount",
+      "problem": false,
+      "question": "How many minutes of walking did you do?",
+      "answer": 30
+    },
+    {
+      "name": "work",
+      "type": "amount",
+      "problem": false,
+      "question": "How many hours of work did you do, including professional and personal work?",
+      "answer": 2
+    }
+  ],
+  "2017-06-03": [
+    {
+      "name": "insomnia",
+      "type": "rating",
+      "problem": true,
+      "question": "Did you experience insomnia?",
+      "answer": 3
+    },
+    {
+      "name": "wake-up",
+      "type": "time",
+      "problem": false,
+      "question": "When did you wake up?",
+      "answer": "6.75"
+    },
+    {
+      "name": "go-to-bed",
+      "type": "time",
+      "problem": false,
+      "question": "When did you go to bed?",
+      "answer": 23
+    },
+    {
+      "name": "naps",
+      "type": "rating",
+      "problem": false,
+      "question": "Did you take any naps?",
+      "answer": 0
+    },
+    {
+      "name": "caffeine",
+      "type": "amount",
+      "problem": false,
+      "question": "How many units of caffeine did you have (a unit is 8 oz of coffee or tea, 20 oz of caffeinated soda)?",
+      "answer": 4
+    },
+    {
+      "name": "alcohol",
+      "type": "amount",
+      "problem": false,
+      "question": "How many units of alcohol did you have (a unit is 12 oz of beer, 5 oz of wine, 1.5 oz of liquor)?",
+      "answer": 0
+    },
+    {
+      "name": "exercise-strength",
+      "type": "amount",
+      "problem": false,
+      "question": "How many minutes of strength training did you do, such as lifting weights or doing push ups?",
+      "answer": 15
+    },
+    {
+      "name": "exercise-aerobic",
+      "type": "amount",
+      "problem": false,
+      "question": "How many minutes of aerobic exercise did you do, such as jogging or cycling?",
+      "answer": 10
+    },
+    {
+      "name": "walking",
+      "type": "amount",
+      "problem": false,
+      "question": "How many minutes of walking did you do?",
+      "answer": 15
+    },
+    {
+      "name": "work",
+      "type": "amount",
+      "problem": false,
+      "question": "How many hours of work did you do, including professional and personal work?",
+      "answer": 8
+    }
+  ],
+  "2017-06-04": [
+    {
+      "name": "insomnia",
+      "type": "rating",
+      "problem": true,
+      "question": "Did you experience insomnia?",
+      "answer": 1
+    },
+    {
+      "name": "wake-up",
+      "type": "time",
+      "problem": false,
+      "question": "When did you wake up?",
+      "answer": "6.25"
+    },
+    {
+      "name": "go-to-bed",
+      "type": "time",
+      "problem": false,
+      "question": "When did you go to bed?",
+      "answer": "22.75"
+    },
+    {
+      "name": "naps",
+      "type": "rating",
+      "problem": false,
+      "question": "Did you take any naps?",
+      "answer": 0
+    },
+    {
+      "name": "caffeine",
+      "type": "amount",
+      "problem": false,
+      "question": "How many units of caffeine did you have (a unit is 8 oz of coffee or tea, 20 oz of caffeinated soda)?",
+      "answer": 5
+    },
+    {
+      "name": "alcohol",
+      "type": "amount",
+      "problem": false,
+      "question": "How many units of alcohol did you have (a unit is 12 oz of beer, 5 oz of wine, 1.5 oz of liquor)?",
+      "answer": 1
+    },
+    {
+      "name": "exercise-strength",
+      "type": "amount",
+      "problem": false,
+      "question": "How many minutes of strength training did you do, such as lifting weights or doing push ups?",
+      "answer": 10
+    },
+    {
+      "name": "exercise-aerobic",
+      "type": "amount",
+      "problem": false,
+      "question": "How many minutes of aerobic exercise did you do, such as jogging or cycling?",
+      "answer": 40
+    },
+    {
+      "name": "walking",
+      "type": "amount",
+      "problem": false,
+      "question": "How many minutes of walking did you do?",
+      "answer": 20
+    },
+    {
+      "name": "work",
+      "type": "amount",
+      "problem": false,
+      "question": "How many hours of work did you do, including professional and personal work?",
+      "answer": 8
+    }
+  ]
+}
