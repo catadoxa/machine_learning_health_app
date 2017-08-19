@@ -30,13 +30,14 @@ def ml_data():
     #data = "analysis/insomnia_data.json"
     url = "http://web.engr.oregonstate.edu/~aluyorg/history.php"
     url = "{}?username={}&password={}".format(url, req["user"], req["password"])
-    req_data = json.dumps(req).encode("utf8")
-    headers = {"Content-type": "application/json", "Accept": "text/plain"}
-    req = urllib.request.Request(url, req_data, headers)
-    print("create req")
-    resp = urllib.request.urlopen(req)
+    #req_data = json.dumps(req).encode("utf8")
+    #headers = {"Content-type": "application/json", "Accept": "text/plain"}
+    #req = urllib.request.Request(url, req_data, headers)
+    #print("create req")
+    #resp = urllib.request.urlopen(req)
     print("open req")
-#    resp = urllib.request.urlopen(url)
+    resp = urllib.request.urlopen(url)
+    print("req open?")
     data = json.loads(resp.read())
     data = get_analysis(data)
     #print(data)
