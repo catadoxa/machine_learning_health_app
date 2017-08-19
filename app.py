@@ -28,15 +28,15 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 def ml_data():
     req = request.get_json(force=True)
     req = dict(req)
-    #data = "analysis/insomnia_data.json"
+    data = "analysis/insomnia_data.json"
     url = "http://web.engr.oregonstate.edu/~aluyorg/history.php"
-    url = "{}?username={}&password={}".format(url, req["user"], req["password"])
-    req_data = json.dumps(req).encode("utf8")
-    headers = {"Content-type": "application/json", "Accept": "text/plain"}
-    req = urllib.request.Request(url, req_data, headers)
-    resp = urllib.request.urlopen(req)
-#    resp = urllib.request.urlopen(url)
-    data = json.loads(resp.read())
+#    url = "{}?username={}&password={}".format(url, req["user"], req["password"])
+#    req_data = json.dumps(req).encode("utf8")
+#    headers = {"Content-type": "application/json", "Accept": "text/plain"}
+#    req = urllib.request.Request(url, req_data, headers)
+#    resp = urllib.request.urlopen(req)
+##    resp = urllib.request.urlopen(url)
+#    data = json.loads(resp.read())
     data = get_analysis(data)
     print(data)
     return data
