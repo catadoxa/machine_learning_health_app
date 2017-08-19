@@ -26,7 +26,7 @@ def ml_data():
     req = request.get_json(force=True)
     req = dict(req)
     #data = "analysis/insomnia_data.json"
-    url = "https://web.engr.oregonstate.edu/~aluyorg/history.php"
+    url = "http://web.engr.oregonstate.edu/~aluyorg/history.php"
     url = "{}?username={}&password={}".format(url, req["user"], req["password"])
     req_data = json.dumps(req).encode("utf8")
     headers = {"Content-type": "application/json", "Accept": "text/plain"}
@@ -40,6 +40,6 @@ def ml_data():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
 
 
