@@ -8,10 +8,10 @@ class Data:
     
     def __init__(self, data):
         try:
-            print("trying")
+            #print("trying")
             self.data = self.read_json(data)
         except:
-            print("failing")
+            #print("failing")
             #if it's not a valid file, then we should assume it's json already
             self.data = data
         self.data_dict, self.names, self.problems, self.problem = self.extract_data()

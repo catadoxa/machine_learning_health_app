@@ -8,13 +8,7 @@ import urllib
 
 
 def get_analysis(req_data):
-    # url = "http://web.engr.oregonstate.edu/~aluyorg/history.php"
-    # req_data = json.dumps(req_data).encode("utf8")
-    # headers = {"Content-type": "application/json", "Accept": "text/plain"}
-    # req = urllib.request.Request(url, req_data, headers)
-    # resp = urllib.request.urlopen(req)
-    # data = json.loads(resp.read())
-    # data = Data(data)
+    #data = Data(data)
     data = Data(req_data)
     ret = {}
     ret["feature-data"] = []
