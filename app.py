@@ -40,8 +40,8 @@ def ml_data():
     #resp = urllib.request.urlopen(url)
     #print("req open?")
     #data = json.loads(resp.read())
-    payload = {"username": req["username"], "password": req["password"]}
-    r = requests.get(url, params=payload)
+    #payload = {"username": req["username"], "password": req["password"]}
+    r = requests.get(url, params=req)
     data = r.json()
     data = get_analysis(data)
     #print(data)

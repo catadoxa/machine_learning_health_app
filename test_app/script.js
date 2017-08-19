@@ -4,7 +4,7 @@ function execute_call() {
 
 	var req = new XMLHttpRequest();
 
-	var payload = {"user": "123", "password": "123"};
+	var payload = {"username": "123", "password": "123"};
 
 
     req.open("POST", "https://ml-health-app-stage.herokuapp.com/api/ml_data", true);
